@@ -2,11 +2,11 @@ package ru.job4j.pojo;
 
 import java.util.Objects;
 
-public class Product {
+public class ProductContains {
     private String name;
     private int count;
 
-    public Product(String name, int count) {
+    public ProductContains(String name, int count) {
         this.name = name;
         this.count = count;
     }
@@ -27,13 +27,20 @@ public class Product {
         this.count = count;
     }
 
+    public static void main(String[] args) {
+        Product first = new Product("Milk", 100);
+        Product second = new Product("Milk", 100);
+        boolean isEqual = first.equals(second);
+        System.out.println(isEqual);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) {
             return false;
         }
-        Product product = (Product) o;
-        return count == product.count && Objects.equals(name, product.name);
+        ProductContains that = (ProductContains) o;
+        return count == that.count && Objects.equals(name, that.name);
     }
 
     @Override
