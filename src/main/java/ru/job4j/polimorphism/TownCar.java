@@ -1,6 +1,6 @@
 package ru.job4j.polimorphism;
 
-public class TownCar implements Vehicle {
+public class TownCar implements ru.job4j.polimorphism.Vehicle {
     @Override
     public void accelerate() {
         System.out.println("Коробка передач автомат. Поставить селектор в режим D.");
@@ -29,5 +29,9 @@ public class TownCar implements Vehicle {
     @Override
     public void chargeBattery() {
         Vehicle.super.chargeBattery();
+    }
+
+    @Override
+    public void move() {
     }
 }

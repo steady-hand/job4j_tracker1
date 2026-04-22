@@ -1,6 +1,6 @@
 package ru.job4j.polimorphism;
 
-public class SportCar implements Vehicle {
+public class SportCar implements ru.job4j.polimorphism.Vehicle {
     @Override
     public void accelerate() {
         System.out.println("Механическая коробка передач. Включить первую, дальше переключать до шестой");
@@ -29,5 +29,9 @@ public class SportCar implements Vehicle {
     @Override
     public void chargeBattery() {
         System.out.println("Аккумулятор в багажнике. Зарядить.");
+    }
+
+    @Override
+    public void move() {
     }
 }

@@ -18,4 +18,6 @@ public interface Vehicle extends Fuel {
     default void chargeBattery() {
         System.out.println("Аккумулятор под капотом. Зарядить.");
     }
+
+    void move();
 }
