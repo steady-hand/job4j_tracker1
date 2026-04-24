@@ -12,7 +12,7 @@ public class Factorial {
         return result;
     }
 
-    public static void main(String[] args) {
+    public static void main(int args) {
         new Factorial().calc(-1);
     }
 }
