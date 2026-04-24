@@ -22,7 +22,7 @@ public class StartUI {
             showMenu(actions);
             int select = input.askInt("Выбрать: ");
             if (select < 0 || select >= actions.length) {
-                out.println("Неверный ввод, введите число от 0 до 6." + (actions.length - 1));
+                out.println("Неверный ввод, введите число от 0 до " + (actions.length - 1));
                 continue;
             }
             UserAction action = actions[select];
@@ -39,7 +39,7 @@ public class StartUI {
 
     public static void main(String[] args) {
         Output output = new ConsoleOutput();
-        Input input = new ValidateInput();
+        Input input = new ValidateInput(output, new ConsoleInput());
         Tracker tracker = new Tracker();
         UserAction[] actions = {
                 new CreateAction(output),
