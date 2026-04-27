@@ -1,6 +1,5 @@
 package ru.job4j.tracker;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Tracker {
@@ -40,7 +39,7 @@ public class Tracker {
         return false;
     }
 
-    public void delete(int id) {
+    public boolean delete(int id) {
         int index = indexOf(id);
         int start = index + 1;
         int length = size - index - 1;
@@ -49,7 +48,7 @@ public class Tracker {
             items[size - 1] = null;
             size--;
         }
-
+        return false;
     }
 
     public Item[] findByName(String key) {
