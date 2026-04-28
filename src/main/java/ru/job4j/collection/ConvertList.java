@@ -7,8 +7,8 @@ public class ConvertList {
     public static List<Integer> convert(List<int[]> list) {
         List<Integer> result = new ArrayList<>();
         for (int[] l : list) {
-            for (int i = 0; i < l.length; i++) {
-                result.add(l[i]);
+            for (int j : l) {
+                result.add(j);
             }
         }
         return result;
