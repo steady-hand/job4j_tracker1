@@ -21,12 +21,9 @@ class ItemDescByNameTest {
         items.add(item3);
         items.sort(compareName.reversed());
         List<Item> expected = new ArrayList<>();
-        Item exp1 = new Item("Vlad");
-        Item exp2 = new Item("Semen");
-        Item exp3 = new Item("Artem");
-        expected.add(exp1);
-        expected.add(exp2);
-        expected.add(exp3);
+        expected.add(item1);
+        expected.add(item3);
+        expected.add(item2);
         assertEquals(expected, items);
     }
 }
